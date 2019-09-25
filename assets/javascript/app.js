@@ -1,34 +1,38 @@
 // Questions/answers objects
 
-var triviaQuestions = [
-  {
-    questions: "Who is the best Marvel Super Hero?",
-    answers: ["Doctor Strange", "Spiderman", "Iron Man"],
-    rightAnswer: "Iron Man"
-  },
-  {
-    questions: "Who is the lead singer of the Smashing Pumpkins?",
-    answers: ["Frank Castle", "Billy Corgan", "Ted Mosby"],
-    rightAnswer: "Billy Corgan"
-  },
+// var triviaQuestions = [
+//   {
+//     question: "Who is the best Marvel Super Hero?",
+//     answers: ["Doctor Strange", "Spiderman", "Iron Man"],
+//     rightAnswer: "Iron Man"
+//   },
+//   {
+//     question: "Who is the lead singer of the Smashing Pumpkins?",
+//     answers: ["Frank Castle", "Billy Corgan", "Ted Mosby"],
+//     rightAnswer: "Billy Corgan"
+//   },
 
-  {
-    questions: "What is the name of Frodo's sword?",
-    answers: ["Sting", "Yggdrasil", "Mjolnir"],
-    rightAnswer: "Sting"
-  }
-];
-
-console.log(triviaQuestions);
-var questionTracker = 0;
-var answerTracker = 0;
-// var right = //scores
-// var wrong = //scores
-// var timer =
+//   {
+//     question: "What is the name of Frodo's sword?",
+//     answers: ["Sting", "Yggdrasil", "Mjolnir"],
+//     rightAnswer: "Sting"
+//   }
+// ];
 
 // for loop for question intervals
 
 // modified timer origional found on jsFiddle made by Srinivas Chekuri
+function grading() {
+  if ($(".aq1.selected").attr("data-value") == "Iron man");
+  console.log($(".aq1.selected").attr("data-value"));
+  correct++;
+  if ($(".aq2.selected").attr("data-value") == "Billy Corgan");
+  console.log($(".aq1.selected").attr("data-value"));
+  correct++;
+  if ($(".aq3.selected").attr("data-value") == "Sting");
+  console.log($(".aq1.selected").attr("data-value"));
+  correct++;
+}
 
 var counter = 30;
 var interval = setInterval(function() {
@@ -40,18 +44,41 @@ var interval = setInterval(function() {
     return;
   } else {
     $("#time").text(counter);
-    console.log("Time Left --> " + counter);
+    //console.log("Time Left --> " + counter);
+
+    // if (counter === 0) {
+    //   grading();
+    // }
   }
 }, 1000);
 
-$("#myForm input").on("click", function() {
-  alert(
-    $("input[name=radioName]:checked", "#myForm").val(
-      "triviaQuestions.rightAnswer"
-    )
-  );
-  //   if (val === "Iron Man") {
-  //     wins++;
-  //   }
-  console.log(this);
+var correct = 0;
+// var userAnswers = $("button").click();
+
+$(document).on("click", "input", function() {
+  $(this).addClass("selected");
+  $(this)
+    .siblings()
+    .removeClass("selected");
+
+  console.log($(".aq1.selected").attr("data-value"));
 });
+
+$(document).on("click", "input", function() {
+  $(this).addClass("selected");
+  $(this)
+    .siblings()
+    .removeClass("selected");
+
+  console.log($(".aq2.selected").attr("data-value"));
+});
+
+$(document).on("click", "input", function() {
+  $(this).addClass("selected");
+  $(this)
+    .siblings()
+    .removeClass("selected");
+
+  console.log($(".aq3.selected").attr("data-value"));
+});
+$("#grading").html("Correct: " + correct);

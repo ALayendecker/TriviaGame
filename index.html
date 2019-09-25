@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <title>Totally Trivial Trivia!</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
   </head>
   <body>
     <div>
@@ -13,27 +14,30 @@
     </div>
     <br />
 
-    <form id="myForm">
-      <h3 class="">Who is the best Marvel Super Hero?</h3>
-      <input type="radio" name="aq1" value="Doctor Strange" />Doctor Strange
-      <input type="radio" name="aq1" value="Spiderman" />Spiderman
-      <input type="radio" name="aq1" value="Iron Man" />Iron Man
-    </form id="myForm">
+    <div>
+      <h3>Who is the best Marvel Super Hero?</h3>
+      <input type="button" class="aq1" data-value="Doctor Strange" />Doctor
+      Strange
 
-    <form id="myForm">
-      <h3 class="">Who is the lead singer of the Smashing Pumpkins?</h3>
-      <input type="radio" name="aq2" value="Frank Castle" />Frank Castle
-      <input type="radio" name="aq2" value="Billy Corgan" />Billy Corgan
-      <input type="radio" name="aq2" value="Ted Mosby" />Ted Mosby
-    </form id="myForm">
+      <input type="button" class="aq1" data-value="Spiderman" /> Spiderman
+      <input type="button" class="aq1" data-value="Iron Man" />Iron Man
+    </div>
 
-    <form id="myForm">
-      <h3 class="">What is the name of Frodo's sword?</h3>
-      <input type="radio" name="aq3" value="Sting" />Sting
-      <input type="radio" name="aq3" value="Yggdrasil" />Yggdrasil
-      <input type="radio" name="aq3" value="Mjolnir" />Mjolnir
-    </form id="myForm">
+    <div>
+      <h3>Who is the lead singer of the Smashing Pumpkins?</h3>
+      <input type="button" class="aq2" data-value="Frank Castle" /> Frank Castle
+      <input type="button" class="aq2" data-value="Billy Corgan" />Billy Corgan
+      <input type="button" class="aq2" data-value="Ted Mosby" />Ted Mosby
+    </div>
 
+    <div>
+      <h3>What is the name of Frodo's sword?</h3>
+      <input type="button" class="aq3" data-value="Sting" /> Sting
+      <input type="button" class="aq3" data-value="Yggdrasil" />Yggdrasil
+      <input type="button" class="aq3" data-value="Mjolnir" />Mjolnir
+    </div>
+
+    <div id="grading"></div>
     <!-- <div>
       <div class="radio-inline">
         <label
