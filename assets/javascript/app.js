@@ -23,21 +23,19 @@
 
 // modified timer origional found on jsFiddle made by Srinivas Chekuri
 function grading() {
-  if ($("#q1.aq1.selected").attr("data-value") == "Iron man") {
+  if ($(".a3").hasClass(".selected")) {
     correct++;
     console.log(correct);
     // console.log($(".aq1.selected").attr("data-value"));
   }
-  if ($("#q2.aq2.selected").attr("data-value") == "Billy Corgan") {
+  if ($(".a5").hasClass(".selected")) {
     correct++;
     console.log(correct);
     // console.log($(".aq2.selected").attr("data-value"));
   }
-  if ($("#q3.aq3.selected").attr("data-value") == "Sting") {
+  if ($(".a7").hasClass(".selected")) {
     correct++;
     console.log(correct);
-  } else {
-    wrong++;
   }
   // console.log($(".aq3.selected").attr("data-value"));
 }
