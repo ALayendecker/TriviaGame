@@ -3,7 +3,9 @@
 }
 
 body {
-  background: url("../images/fantasy\ background.jpg");
+  background-image: url("../images/fantasy\ background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 section {
