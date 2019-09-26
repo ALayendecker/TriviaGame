@@ -23,17 +23,17 @@
 
 // modified timer origional found on jsFiddle made by Srinivas Chekuri
 function grading() {
-  if ($(".a3").hasClass(".selected")) {
+  if ($(".a3").hasClass("selected")) {
     correct++;
     console.log(correct);
     // console.log($(".aq1.selected").attr("data-value"));
   }
-  if ($(".a5").hasClass(".selected")) {
+  if ($(".a5").hasClass("selected")) {
     correct++;
     console.log(correct);
     // console.log($(".aq2.selected").attr("data-value"));
   }
-  if ($(".a7").hasClass(".selected")) {
+  if ($(".a7").hasClass("selected")) {
     correct++;
     console.log(correct);
   }
@@ -52,8 +52,9 @@ var interval = setInterval(function() {
     $("#time").text(counter);
     //console.log("Time Left --> " + counter);
 
-    if (counter === 15) {
+    if (counter === 20) {
       grading();
+      $("#grading").html("Correct: " + correct);
     }
   }
 }, 1000);
@@ -94,4 +95,5 @@ $("#q3").on("click", "input", function() {
     console.log($(".aq3.selected").attr("data-value"));
   }
 });
+
 $("#grading").html("Correct: " + correct);
