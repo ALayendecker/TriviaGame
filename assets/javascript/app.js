@@ -53,18 +53,19 @@ var counter = 30;
 var interval = setInterval(function() {
   counter--;
   // Display 'counter' wherever you want to display it.
-  if (counter <= 0) {
+  if (counter < 0) {
     clearInterval(interval);
     $("#timer").html(displayImage);
     $(".timeUp").html(timesUp);
     return;
   } else {
-    $("#time").text(counter);
+    $("#time").text(counter + " Seconds");
     //console.log("Time Left --> " + counter);
 
     if (counter === 0) {
       grading();
       $("#grading").html("Correct: " + correct);
+      $("#time").hide();
     }
   }
 }, 1000);

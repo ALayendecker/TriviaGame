@@ -16,6 +16,11 @@ section {
   padding: 10px;
 }
 
+#time {
+  padding-top: 20px;
+  font-size: 2.5em;
+}
+
 #timer {
   padding-top: 20px;
   font-size: 2.5em;
