@@ -23,10 +23,7 @@
 var images = ["../images/donut man.gif"];
 
 function displayImage() {
-  $("#timer").html(
-    '<img src="assets/images/donut man.gif" />',
-    "<h3>Times Up!</h3>"
-  );
+  $("#timer").html('<img id="donut" src="assets/images/donut man.gif" />');
 }
 function timesUp() {
   $(".timeUp").html("<h3>Times Up!</h3>");
@@ -50,6 +47,8 @@ function grading() {
   // console.log($(".aq3.selected").attr("data-value"));
 }
 
+//timer here
+
 var counter = 30;
 var interval = setInterval(function() {
   counter--;
@@ -70,6 +69,7 @@ var interval = setInterval(function() {
   }
 }, 1000);
 
+//Questions Correct Counter
 var correct = 0;
 var wrong = 0;
 // var userAnswers = $("button").click();
