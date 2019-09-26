@@ -24,3 +24,11 @@ section {
 #grading {
   font-size: 2.5em;
 }
+
+#timer {
+  text-align: center;
+}
+
+h3 {
+  z-index: 2;
+}

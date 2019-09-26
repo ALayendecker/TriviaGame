@@ -20,7 +20,17 @@
 // ];
 
 // for loop for question intervals
+var images = ["../images/donut man.gif"];
 
+function displayImage() {
+  $("#timer").html(
+    '<img src="assets/images/donut man.gif" />',
+    "<h3>Times Up!</h3>"
+  );
+}
+function timesUp() {
+  $(".timeUp").html("<h3>Times Up!</h3>");
+}
 // modified timer origional found on jsFiddle made by Srinivas Chekuri
 function grading() {
   if ($(".a3").hasClass("selected")) {
@@ -46,13 +56,14 @@ var interval = setInterval(function() {
   // Display 'counter' wherever you want to display it.
   if (counter <= 0) {
     clearInterval(interval);
-    $("#timer").html("<h3>Times up!</h3>");
+    $("#timer").html(displayImage);
+    $(".timeUp").html(timesUp);
     return;
   } else {
     $("#time").text(counter);
     //console.log("Time Left --> " + counter);
 
-    if (counter === 20) {
+    if (counter === 0) {
       grading();
       $("#grading").html("Correct: " + correct);
     }
